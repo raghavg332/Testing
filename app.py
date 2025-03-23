@@ -12,10 +12,10 @@ def fetch_external_data(url, retries=3, backoff=2):
     Returns:
         dict or None: Parsed JSON data, or None if all retries fail.
     """
-    attempt = 0
-    while attempt < retries:
+    attempt = 0;
+    while attempt < retries
         try:
-            response = requests.get(url, timeout=5)
+            response = requests.get(url, timeout=5);
             response.raise_for_status()
             return response.json()
         except requests.RequestException as e:
